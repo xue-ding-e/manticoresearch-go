@@ -39,6 +39,8 @@ func main() {
   // Initialize ApiClient
   openapiclient.SetDefaultIP("127.0.0.1") // If not set or set to "", defaults to 127.0.0.1
   configuration := openapiclient.NewConfiguration()
+  // Set Manticore's host/port if necessary (http://127.0.0.1:9308 by default) 
+  // configuration.Servers[0].URL = "http://127.0.0.2:9408"
   apiClient := openapiclient.NewAPIClient(configuration)
   
   // Add documents to an index 
@@ -125,6 +127,9 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [Aggregation](docs/Aggregation.md)
+ - [AggregationComposite](docs/AggregationComposite.md)
+ - [AggregationCompositeSourcesInnerValue](docs/AggregationCompositeSourcesInnerValue.md)
+ - [AggregationCompositeSourcesInnerValueTerms](docs/AggregationCompositeSourcesInnerValueTerms.md)
  - [AggregationSortInnerValue](docs/AggregationSortInnerValue.md)
  - [AggregationTerms](docs/AggregationTerms.md)
  - [BoolFilter](docs/BoolFilter.md)
@@ -157,6 +162,7 @@ Class | Method | HTTP request | Description
  - [PercolateRequestQuery](docs/PercolateRequestQuery.md)
  - [QueryFilter](docs/QueryFilter.md)
  - [RangeFilter](docs/RangeFilter.md)
+ - [RangeFilterLte](docs/RangeFilterLte.md)
  - [ReplaceDocumentRequest](docs/ReplaceDocumentRequest.md)
  - [SearchRequest](docs/SearchRequest.md)
  - [SearchResponse](docs/SearchResponse.md)
